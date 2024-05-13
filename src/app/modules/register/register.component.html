@@ -76,8 +76,7 @@
             <pf-button
                 class="mb-2"
                 [loading]="isFacebookLoading"
-                [disabled]="isAuthLoading || isGoogleLoading"
-                (click)="registerByFacebook()"
+                [disabled]="true || isAuthLoading || isGoogleLoading"
             >
                 <i class="fab fa-facebook mr-2"></i>
                 Sign up using Facebook

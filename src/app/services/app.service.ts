@@ -1,124 +1,106 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
-import { sleep } from '@/utils/helpers';
+import {sleep} from '@/utils/helpers';
+
+import {createUserWithEmailAndPassword} from '@firebase/auth';
+import {
+    User,
+    onAuthStateChanged,
+    signInWithEmailAndPassword,
+    signInWithPopup
+} from 'firebase/auth';
+import {GoogleAuthProvider} from 'firebase/auth';
+import {firebaseAuth} from '@/firebase';
+
+const provider = new GoogleAuthProvider();
 
 @Injectable({
     providedIn: 'root'
 })
 export class AppService {
-    public user: any = null;
+    public user: User = null;
 
-    constructor(private router: Router, private toastr: ToastrService) {}
+    constructor(
+        private router: Router,
+        private toastr: ToastrService
+    ) {
+        onAuthStateChanged(
+            firebaseAuth,
+            (user) => {
+                if (user) {
+                    this.user = user;
+                } else {
+                    this.user = undefined;
+                }
+            },
+            (e) => {
+                this.user = undefined;
+            }
+        );
+    }
 
-    async loginByAuth({email, password}) {
+    async registerWithEmail(email: string, password: string) {
         try {
-          console.log('email',email)
-            await authLogin(email, password);
-            await this.getProfile();
+            const result = await createUserWithEmailAndPassword(
+                firebaseAuth,
+                email,
+                password
+            );
             this.router.navigate(['/']);
-            this.toastr.success('Login success');
+            this.user = result.user;
+            return result;
         } catch (error) {
-            this.toastr.error(error.message);
+            throw error;
         }
     }
 
-    async registerByAuth({email, password}) {
+    async loginWithEmail(email: string, password: string) {
         try {
-          await authLogin(email, password);
-          await this.getProfile();
-          this.router.navigate(['/']);
-          this.toastr.success('Register success');
+            const result = await signInWithEmailAndPassword(
+                firebaseAuth,
+                email,
+                password
+            );
+            this.user = result.user;
+            this.router.navigate(['/']);
+
+            return result;
         } catch (error) {
-            this.toastr.error(error.message);
+            throw error;
         }
     }
 
-    async loginByGoogle() {
+    async signInByGoogle() {
         try {
-          this.toastr.warning('Not implemented');
+            const result = await signInWithPopup(firebaseAuth, provider);
+            this.user = result.user;
+            this.router.navigate(['/']);
 
+            return result;
         } catch (error) {
-            this.toastr.error(error.message);
-        }
-    }
-
-    async registerByGoogle() {
-        try {
-          this.toastr.warning('Not implemented');
-
-        } catch (error) {
-            this.toastr.error(error.message);
-        }
-    }
-
-    async loginByFacebook() {
-        try {
-          this.toastr.warning('Not implemented');
-
-        } catch (error) {
-            this.toastr.error(error.message);
-        }
-    }
-
-    async registerByFacebook() {
-        try {
-
-            this.toastr.warning('Not implemented');
-        } catch (error) {
-            this.toastr.error(error.message);
+            throw error;
         }
     }
 
     async getProfile() {
         try {
-            const user = await getAuthStatus();
-            if(user) {
-              this.user = user;
+            await sleep(500);
+            const user = firebaseAuth.currentUser;
+            if (user) {
+                this.user = user;
             } else {
-              this.logout();
+                this.logout();
             }
-          } catch (error) {
-          this.logout();
+        } catch (error) {
+            this.logout();
             throw error;
         }
     }
 
-    logout() {
-        localStorage.removeItem('token');
-        localStorage.removeItem('gatekeeper_token');
+    async logout() {
+        await firebaseAuth.signOut();
         this.user = null;
         this.router.navigate(['/login']);
     }
 }
-
-
-export const authLogin = (email: string, password: string) => {
-  return new Promise(async (res, rej) => {
-    await sleep(500);
-    if (email === 'admin@example.com' && password === 'admin') {
-      localStorage.setItem(
-        'authentication',
-        JSON.stringify({ profile: { email: 'admin@example.com' } })
-      );
-      return res({ profile: { email: 'admin@example.com' } });
-    }
-    return rej({ message: 'Credentials are wrong!' });
-  });
-};
-
-export const getAuthStatus = () => {
-  return new Promise(async (res, rej) => {
-    await sleep(500);
-    try {
-      let authentication = localStorage.getItem('authentication');
-      if (authentication) {
-        authentication = JSON.parse(authentication);
-        return res(authentication);
-      }
-      return res(undefined);
-    } catch (error) {
-      return res(undefined);
-    }
-  });
-};

@@ -20,7 +20,7 @@
         style="justify-content: start; align-items: center"
     >
         <pf-image
-            [src]="user.picture"
+            [src]="user.photoURL"
             fallbackSrc="assets/img/default-profile.png"
             style="margin-left: 12px"
             alt="User Image"
@@ -30,7 +30,7 @@
         />
         <div class="info">
             <a [routerLink]="['/profile']" class="d-block">
-                {{ user.profile.email }}
+                {{ user.email }}
             </a>
         </div>
     </div>

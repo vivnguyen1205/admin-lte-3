@@ -59,8 +59,7 @@
                 class="mb-2"
                 [variant]="'primary'"
                 [loading]="isFacebookLoading"
-                [disabled]="isAuthLoading || isGoogleLoading"
-                (click)="loginByFacebook()"
+                [disabled]="true || isAuthLoading || isGoogleLoading"
             >
                 <i class="fab fa-facebook mr-2"></i>
                 Sign in using Facebook
