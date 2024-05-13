@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.8...v0.2.9) (2024-05-13)
+
+
+### Features
+
+* update Angular version to 17.3.7 ([2505e0c](https://github.com/erdkse/adminlte-3-angular/commit/2505e0c584c0d9191fc2c290a27ca1f9987ddbd6))
+
 ### [0.2.8](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.7...v0.2.8) (2024-05-13)
 
 ### [0.2.7](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.6...v0.2.7) (2024-05-13)
