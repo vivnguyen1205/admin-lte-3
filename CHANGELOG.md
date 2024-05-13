@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.9...v0.2.10) (2024-05-13)
+
+
+### Bug Fixes
+
+* fix register with email ([cca077f](https://github.com/erdkse/adminlte-3-angular/commit/cca077f5209921252f902fdf2d3eba1dd48f2d9f))
+
 ### [0.2.9](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.8...v0.2.9) (2024-05-13)
 
 
