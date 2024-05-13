@@ -80,7 +80,7 @@ registerLocaleData(localeEn, 'en-EN');
         }),
         NgxGoogleAnalyticsModule.forRoot(environment.GA_ID)
     ],
-    providers: [],
+    providers: [{provide: APP_BASE_HREF, useValue: environment.BASE_URL}],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
