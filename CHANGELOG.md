@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.4...v0.2.5) (2024-05-13)
+
+
+### Features
+
+* add firebase integration ([dbf227f](https://github.com/erdkse/adminlte-3-angular/commit/dbf227fd5c8939c064f06b88ce3c3dde1f4f994b))
+
 ### [0.2.4](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.3...v0.2.4) (2024-05-12)
 
 ### [0.2.3](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.2...v0.2.3) (2024-02-17)
