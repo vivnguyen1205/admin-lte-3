@@ -47,8 +47,8 @@ export class AppService {
                 email,
                 password
             );
-            this.router.navigate(['/']);
             this.user = result.user;
+            this.router.navigate(['/']);
             return result;
         } catch (error) {
             throw error;

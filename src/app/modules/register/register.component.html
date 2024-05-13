@@ -64,6 +64,7 @@
                     <pf-button
                         [loading]="isAuthLoading"
                         [disabled]="isFacebookLoading || isGoogleLoading"
+                        (click)="registerByAuth()"
                     >
                         Register
                     </pf-button>
