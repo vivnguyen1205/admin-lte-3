@@ -25,16 +25,17 @@
 
 ## Demo
 
-Online demo: https://adminlte-angular.erdkse.com
+Online demo: https://erdkse.com/adminlte-angular
 
-To login website use:
+To login website you can `create` a user. All authenication related features are `working` and `live`!
 
-`username:` admin@example.com<br />
-`password:` admin<br />
+`Firebase` is added as backend provider to increase better user experince.
 
 ## Available Scripts
 
-In the project directory, you can run:
+`Note`: Please first copy `.env.example` file as `.env` add fill the required fields.
+
+Then, in the project directory, you can run:
 
 ### `npm run start`
 
@@ -46,3 +47,9 @@ Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 [![License](https://img.shields.io/github/license/erdkse/adminlte-3-angular.svg)](/LICENSE)
 
 Released 2021 by [Erdi Köse](https://erdkse.com)
+
+## Support for more
+
+If you liked my work and would like to support for my expenses like server costs, please; (ie. `Firebase`)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/erdkse)
