@@ -7,10 +7,10 @@ env:
     BASE_URL: ${{ secrets.BASE_URL }}
     FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
 on:
+    workflow_dispatch:
     push:
-        # Pattern matched against refs/tags
         tags:
-            - '*' # Push events to every tag not containing /
+            - '*'
 jobs:
     Deploy-Production:
         runs-on: ubuntu-latest
