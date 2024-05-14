@@ -36,7 +36,6 @@ import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {environment} from 'environments/environment';
-import {APP_BASE_HREF} from '@angular/common';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -80,7 +79,7 @@ registerLocaleData(localeEn, 'en-EN');
         }),
         NgxGoogleAnalyticsModule.forRoot(environment.GA_ID)
     ],
-    providers: [{provide: APP_BASE_HREF, useValue: environment.BASE_URL}],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

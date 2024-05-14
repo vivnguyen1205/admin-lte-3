@@ -2,6 +2,5 @@
 export const environment = {
     production: false,
     GA_ID: '',
-    BASE_URL: '',
     FIREBASE_CONFIG: ''
 };

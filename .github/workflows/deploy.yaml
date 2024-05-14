@@ -1,11 +1,10 @@
 name: Production Tag Deployment
 env:
+    NODE_ENV: ${{ secrets.NODE_ENV }}
     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-    NODE_ENV: ${{ secrets.NODE_ENV }}
-    GA_ID: ${{ secrets.GA_ID }}
     FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
-    BASE_URL: ${{ secrets.BASE_URL }}
+    GA_ID: ${{ secrets.GA_ID }}
 on:
     workflow_dispatch:
     push:
