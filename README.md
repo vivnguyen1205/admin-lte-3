@@ -25,7 +25,7 @@
 
 ## Demo
 
-Online demo: https://www.erdkse.com/projects/preview?project=adminlte-angular
+Online demo: https://www.erdkse.com/projects/preview/adminlte-angular
 
 To login website you can `create` a user. All authenication related features are `working` and `live`!
 
