@@ -3,8 +3,6 @@ import {getAnalytics} from 'firebase/analytics';
 import {connectAuthEmulator, getAuth} from 'firebase/auth';
 import {environment} from 'environments/environment';
 
-let {PROD} = import.meta.env;
-
 const firebaseConfig: FirebaseOptions = environment.FIREBASE_CONFIG
     ? JSON.parse(environment.FIREBASE_CONFIG)
     : {apiKey: 'MOCK_KEY'};
@@ -14,6 +12,6 @@ const app = initializeApp(firebaseConfig);
 
 export const firebaseAuth = getAuth(app);
 
-if (!PROD) {
+if (!environment.production) {
     connectAuthEmulator(firebaseAuth, 'http://localhost:9099');
 }
