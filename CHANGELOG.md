@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.13](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.12...v0.2.13) (2024-05-23)
+
+
+### Features
+
+* add firebase emulator for local development ([52f6114](https://github.com/erdkse/adminlte-3-angular/commit/52f6114875ebc908643e064bf078e0db433b1620))
+* read environments ([f20397a](https://github.com/erdkse/adminlte-3-angular/commit/f20397ad103e1289dd0230acf3be60f6bb1f6f64))
+
 ### [0.2.12](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.11...v0.2.12) (2024-05-14)
 
 ### [0.2.11](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.10...v0.2.11) (2024-05-13)
