@@ -36,7 +36,6 @@ import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {environment} from 'environments/environment';
-import { NgxEnvModule } from "@ngx-env/core";
 
 registerLocaleData(localeEn, 'en-EN');
 
