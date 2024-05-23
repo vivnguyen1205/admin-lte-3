@@ -37,8 +37,11 @@ You need to run `npm run firebase:start` on a different terminal and keep it run
 
 Then, in the project directory, you can run: `npm run serve`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
+
 Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
+
+`Note`: You must install firebase [emulator](https://firebase.google.com/docs/emulator-suite/install_and_configure).
 
 ## License
 
