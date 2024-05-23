@@ -1,15 +1,19 @@
 import {FirebaseOptions, initializeApp} from 'firebase/app';
 import {getAnalytics} from 'firebase/analytics';
-import {getAuth} from 'firebase/auth';
+import {connectAuthEmulator, getAuth} from 'firebase/auth';
 import {environment} from 'environments/environment';
 
-if (!environment.FIREBASE_CONFIG) {
-    throw new Error('Firebase config is missing!');
-}
+let {PROD} = import.meta.env;
 
-const firebaseConfig: FirebaseOptions = JSON.parse(environment.FIREBASE_CONFIG);
+const firebaseConfig: FirebaseOptions = environment.FIREBASE_CONFIG
+    ? JSON.parse(environment.FIREBASE_CONFIG)
+    : {apiKey: 'MOCK_KEY'};
 
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
 export const firebaseAuth = getAuth(app);
+
+if (!PROD) {
+    connectAuthEmulator(firebaseAuth, 'http://localhost:9099');
+}

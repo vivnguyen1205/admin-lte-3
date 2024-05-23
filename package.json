@@ -10,6 +10,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
+        "firebase:start": "firebase emulators:start",
         "update": "ng update --force @angular/cli @angular/core",
         "release:patch": "standard-version --release-as patch",
         "release:minor": "standard-version --release-as minor",

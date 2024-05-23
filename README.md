@@ -31,13 +31,11 @@ To login website you can `create` a user. All authenication related features are
 
 `Firebase` is added as backend provider to increase better user experince.
 
-## Available Scripts
+## Development
 
-`Note`: Please first copy `.env.example` file as `.env` add fill the required fields.
+You need to run `npm run firebase:start` on a different terminal and keep it running.
 
-Then, in the project directory, you can run:
-
-### `npm run start`
+Then, in the project directory, you can run: `npm run serve`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
