@@ -3,8 +3,8 @@ env:
     NODE_ENV: ${{ secrets.NODE_ENV }}
     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-    FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
-    GA_ID: ${{ secrets.GA_ID }}
+    NG_APP_FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
+    NG_APP_GA_ID: ${{ secrets.GA_ID }}
 on:
     workflow_dispatch:
     push:

@@ -15,12 +15,18 @@
             "prefix": "app",
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:browser",
+                    "builder": "@ngx-env/builder:application",
                     "options": {
-                        "outputPath": "dist/adminlte",
+                        "outputPath": {
+                            "base": "dist/adminlte"
+                        },
+                        "ngxEnv": {
+                            "prefix": "NG_APP_",
+                            "runtime": true,
+                            "unsecure": true
+                        },
                         "index": "src/index.html",
-                        "main": "src/main.ts",
-                        "polyfills": "src/polyfills.ts",
+                        "polyfills": ["src/polyfills.ts"],
                         "tsConfig": "tsconfig.app.json",
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": [
@@ -28,14 +34,13 @@
                             "node_modules/ngx-toastr/toastr.css"
                         ],
                         "scripts": [],
-                        "vendorChunk": true,
                         "preserveSymlinks": true,
                         "extractLicenses": false,
-                        "buildOptimizer": false,
                         "sourceMap": true,
                         "optimization": false,
                         "namedChunks": true,
-                        "allowedCommonJsDependencies": ["path", "os", "fs"]
+                        "allowedCommonJsDependencies": ["path", "os", "fs"],
+                        "browser": "src/main.ts"
                     },
                     "configurations": {
                         "production": {
@@ -50,8 +55,6 @@
                             "sourceMap": false,
                             "namedChunks": false,
                             "extractLicenses": true,
-                            "vendorChunk": false,
-                            "buildOptimizer": true,
                             "budgets": [
                                 {
                                     "type": "initial",
@@ -68,9 +71,13 @@
                     }
                 },
                 "serve": {
-                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "builder": "@ngx-env/builder:dev-server",
                     "options": {
-                        "buildTarget": "adminlte:build"
+                        "buildTarget": "adminlte:build",
+                        "ngxEnv": {
+                            "prefix": "NG_APP_",
+                            "runtime": true
+                        }
                     },
                     "configurations": {
                         "production": {
@@ -79,13 +86,13 @@
                     }
                 },
                 "extract-i18n": {
-                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "builder": "@ngx-env/builder:extract-i18n",
                     "options": {
                         "buildTarget": "adminlte:build"
                     }
                 },
                 "test": {
-                    "builder": "@angular-devkit/build-angular:karma",
+                    "builder": "@ngx-env/builder:karma",
                     "options": {
                         "main": "src/test.ts",
                         "polyfills": "src/polyfills.ts",

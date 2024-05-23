@@ -5,7 +5,6 @@
         "outDir": "./dist/out-tsc",
         "sourceMap": false,
         "declaration": false,
-        "downlevelIteration": true,
         "experimentalDecorators": true,
         "module": "es2020",
         "moduleResolution": "node",
@@ -14,6 +13,17 @@
         "lib": ["es2018", "dom"],
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "noUnusedParameters": false,
+        "noUnusedLocals": false,
+        "noImplicitOverride": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitThis": true,
+        "strictBindCallApply": true,
+        "useDefineForClassFields": false,
+        // "strictNullChecks": true,
+        // "noImplicitReturns": true,
+        // "strictFunctionTypes": true,
+        // "noImplicitAny": true,
         "paths": {
             "path": ["../node_modules/path-browserify"],
             "os": ["../node_modules/os-browserify/browser"],
@@ -24,12 +34,14 @@
             "@pages/*": ["app/pages/*"],
             "@services/*": ["app/services/*"],
             "@/*": ["app/*"]
-        },
-        "useDefineForClassFields": false
+        }
     },
     "angularCompilerOptions": {
         "fullTemplateTypeCheck": true,
         "strictInjectionParameters": true,
-        "enableResourceInlining": false
+        "enableResourceInlining": false,
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
     }
 }
