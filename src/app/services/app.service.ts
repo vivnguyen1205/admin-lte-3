@@ -19,7 +19,7 @@ const provider = new GoogleAuthProvider();
     providedIn: 'root'
 })
 export class AppService {
-    public user: User = null;
+    public user?: User | null = null;
 
     constructor(
         private router: Router,

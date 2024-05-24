@@ -10,10 +10,10 @@ const initialState = {
     }
 };
 
-export function authReducer(
+export const authReducer = (
     state = initialState,
     action: AuthActions.LoginUser
-) {
+) => {
     switch (action.type) {
         case AuthActions.LOGIN_USER:
             localStorage.setItem('token', action.payload);
@@ -30,4 +30,4 @@ export function authReducer(
         default:
             return state;
     }
-}
+};

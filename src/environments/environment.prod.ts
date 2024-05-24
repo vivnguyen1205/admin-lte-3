@@ -1,6 +1,8 @@
 const NG_APP_FIREBASE_CONFIG = import.meta.env.NG_APP_FIREBASE_CONFIG;
 const NG_APP_GA_ID = import.meta.env.NG_APP_GA_ID;
 
+console.log('env', import.meta.env);
+
 export const environment = {
     production: true,
     NODE_ENV: import.meta.env.NODE_ENV,

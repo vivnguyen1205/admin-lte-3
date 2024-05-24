@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 
 import {AppRoutingModule} from '@/app-routing.module';
 import {AppComponent} from './app.component';
@@ -39,7 +39,8 @@ import {environment} from 'environments/environment';
 
 registerLocaleData(localeEn, 'en-EN');
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         MainComponent,
         LoginComponent,
@@ -62,10 +63,12 @@ registerLocaleData(localeEn, 'en-EN');
         ControlSidebarComponent,
         SidebarSearchComponent
     ],
-    bootstrap: [AppComponent], imports: [ProfabricComponentsModule,
+    bootstrap: [AppComponent],
+    imports: [
+        ProfabricComponentsModule,
         CommonModule,
         BrowserModule,
-        StoreModule.forRoot({ auth: authReducer, ui: uiReducer }),
+        StoreModule.forRoot({auth: authReducer, ui: uiReducer}),
         AppRoutingModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
@@ -74,5 +77,8 @@ registerLocaleData(localeEn, 'en-EN');
             positionClass: 'toast-top-right',
             preventDuplicates: true
         }),
-        NgxGoogleAnalyticsModule.forRoot(environment.GA_ID)], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        NgxGoogleAnalyticsModule.forRoot(environment.GA_ID)
+    ],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule {}
