@@ -36,6 +36,9 @@ import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {environment} from 'environments/environment';
+import { FormComponent } from './components/form/form.component';
+import { TableComponent } from './components/table/table.component';
+import { NewComponent } from './components/new/new.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -61,7 +64,10 @@ registerLocaleData(localeEn, 'en-EN');
         SubMenuComponent,
         MenuItemComponent,
         ControlSidebarComponent,
-        SidebarSearchComponent
+        SidebarSearchComponent,
+        FormComponent,
+        TableComponent,
+        NewComponent
     ],
     bootstrap: [AppComponent],
     imports: [

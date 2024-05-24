@@ -36,7 +36,8 @@ export const MENU = [
     {
         name: 'Dashboard',
         iconClasses: 'fas fa-tachometer-alt',
-        path: ['/']
+        path: ['/'],
+        
     },
     {
         name: 'Blank',
@@ -44,16 +45,16 @@ export const MENU = [
         path: ['/blank']
     },
     {
-        name: 'Main Menu',
+        name: 'Dynamic Approval Procee',
         iconClasses: 'fas fa-folder',
         children: [
             {
-                name: 'Sub Menu',
+                name: 'Submission',
                 iconClasses: 'far fa-address-book',
                 path: ['/sub-menu-1']
             },
             {
-                name: 'Blank',
+                name: 'My Approval',
                 iconClasses: 'fas fa-file',
                 path: ['/sub-menu-2']
             }
