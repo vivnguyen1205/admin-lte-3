@@ -3,9 +3,9 @@ import {getAnalytics} from 'firebase/analytics';
 import {connectAuthEmulator, getAuth} from 'firebase/auth';
 import {environment} from 'environments/environment';
 
-const firebaseConfig: FirebaseOptions = environment.FIREBASE_CONFIG
-    ? JSON.parse(environment.FIREBASE_CONFIG)
-    : {apiKey: 'MOCK_KEY'};
+const firebaseConfig: FirebaseOptions = environment.FIREBASE_CONFIG || {
+    apiKey: 'MOCK_KEY'
+};
 
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
