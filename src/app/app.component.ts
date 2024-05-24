@@ -14,7 +14,10 @@ export class AppComponent {
         protected $gaService: GoogleAnalyticsService
     ) {
         this.router.events.subscribe((event: Event) => {
-            if (event instanceof NavigationEnd && environment.production) {
+            if (
+                event instanceof NavigationEnd &&
+                environment.NODE_ENV === 'production'
+            ) {
                 this.$gaService.pageView(event.url);
             }
         });

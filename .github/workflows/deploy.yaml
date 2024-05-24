@@ -3,8 +3,8 @@ env:
     NODE_ENV: ${{ secrets.NODE_ENV }}
     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-    NG_APP_FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
-    NG_APP_GA_ID: ${{ secrets.GA_ID }}
+    FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
+    GA_ID: ${{ secrets.GA_ID }}
 on:
     workflow_dispatch:
     push:
@@ -17,6 +17,8 @@ jobs:
             - uses: actions/checkout@v3
             - name: Install Vercel CLI
               run: npm install --global vercel@latest
+            - name: Write environments
+              run: node write-envs.cjs
             - name: Pull Vercel Environment Information
               run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
             - name: Build Project Artifacts
