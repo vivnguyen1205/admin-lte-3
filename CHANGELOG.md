@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.23](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.22...v0.2.23) (2024-05-24)
+
+
+### Features
+
+* show toast message on network error ([5c35967](https://github.com/erdkse/adminlte-3-angular/commit/5c35967162a399695962a77df98fd207e9c429a2))
+
 ### [0.2.22](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.21...v0.2.22) (2024-05-24)
 
 ### [0.2.21](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.20...v0.2.21) (2024-05-24)
