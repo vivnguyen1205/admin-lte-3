@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.19](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.18...v0.2.19) (2024-05-24)
+
+
+### Features
+
+* add dotenv package ([47a8707](https://github.com/erdkse/adminlte-3-angular/commit/47a8707bd146e2b7ff00e70caed84d215b759f32))
+
 ### [0.2.18](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.17...v0.2.18) (2024-05-24)
 
 
