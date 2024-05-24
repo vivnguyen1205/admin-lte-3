@@ -1,3 +1,4 @@
+<div class="form">
 <div class="card">
     <div class="card-body cb-search">
     <div class="row">
@@ -16,7 +17,7 @@
     <option value="" data-select2-id="2">--All--</option>
     <option value="True">Is urgent</option>
     <option value="False">Not urgent</option>
-    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-slUrgent-container"><span class="select2-selection__rendered" id="select2-slUrgent-container" role="textbox" aria-readonly="true" title="--All--">--All--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-slUrgent-container"><span class="select2-selection__rendered" id="select2-slUrgent-container" role="textbox" aria-readonly="true" title="--All--"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
     </div>
     </div>
     <div class="col-md-3 col-sm-3 col-12 mb-1 mb-sm-0" style="max-width: 250px">
@@ -47,7 +48,7 @@
     </div>
     <div class="col" style="max-width: 220px;">
     <label class="d-none d-sm-block">&nbsp;</label>
-    <div>
+    <div class="buttons">
     <a onclick="searchByCheckbox()" class="btn bg-gradient-primary">
     <i class="fa fa-search"></i> Search
     </a>
@@ -56,31 +57,34 @@
     </a>
     </div>
     </div>
+ 
     <div class="col-md-12">
     <div class="tab-container">
-    <!-- <div class="item chk-tab chk-all">
+          <!-- CHIPS -->
+    <div class="item chk-tab chk-all">
     <input class="my-chk" type="checkbox" id="chk-all" name="options">
     <label class="tab-label" id="all-tab-label" for="chk-all">All (0)</label>
-    </div> -->
-    <!-- CHIPS -->
-    <!-- <div class="item chk-tab chk-in-progress">
+    </div>
+  
+   <div class="item chk-tab chk-in-progress">
     <input class="my-chk" type="checkbox" id="chk-in-progress" name="options" value="InProgress">
-    <label class="tab-label" id="in-progress-tab-label" for="chk-in-progress">In Progress (0)</label>
+    <label class="tab-label" id="in-progress-tab-label" for="chk-in-progress">In Progress</label>
     </div>
     <div class="item chk-tab chk-approved">
     <input class="my-chk" type="checkbox" id="chk-approved" name="options" value="Approved">
-    <label class="tab-label" id="approved-tab-label" for="chk-approved">Approved (0)</label>
+    <label class="tab-label" id="approved-tab-label" for="chk-approved">Approved</label>
     </div>
     <div class="item chk-tab chk-rejected">
     <input class="my-chk" type="checkbox" id="chk-rejected" name="options" value="Rejected">
-    <label class="tab-label" id="rejected-tab-label" for="chk-rejected">Rejected (0)</label>
+    <label class="tab-label" id="rejected-tab-label" for="chk-rejected">Rejected </label>
     </div>
     <div class="item chk-tab chk-archived">
     <input class="my-chk" type="checkbox" id="chk-archived" name="options" value="Achived">
-    <label class="tab-label" id="archive-tab-label" for="chk-archived">Archived (0)</label>
-    </div> -->
+    <label class="tab-label" id="archive-tab-label" for="chk-archived">Archived</label>
+    </div> 
     </div>
     </div>
     </div>
     </div>
     </div>
+</div>

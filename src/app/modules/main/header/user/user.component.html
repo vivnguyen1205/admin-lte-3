@@ -1,6 +1,18 @@
+
 <pf-dropdown [hideArrow]="true" class="user-menu">
-    <div slot="head">
-        <a class="nav-link">
+    <li class="nav-item d-none d-sm-block">
+        <a class="nav-link" href="#">
+        <i class="fas fa-user"></i> <span class="user-name"></span>
+        </a>
+        </li>
+    <!-- <li class="nav-item d-none d-sm-block">
+        <a class="nav-link" href="#">
+        <i class="fas fa-user"></i> <span class="user-name">{{user.email}}</span>
+        </a>
+        </li> -->
+    <!-- <div slot="head">
+        <p>{{ user.email }}</p>
+         <a class="nav-link">
             <pf-image
                 [src]="user.photoURL"
                 fallbackSrc="assets/img/default-profile.png"
@@ -10,8 +22,8 @@
                 alt="User Image"
                 rounded="true"
             />
-        </a>
-    </div>
+        </a> -->
+    <!-- </div> -->
     <div slot="body">
         <li class="user-header bg-primary">
             <pf-image

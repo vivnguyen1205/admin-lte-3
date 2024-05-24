@@ -10,7 +10,7 @@ const BASE_CLASSES = 'main-sidebar elevation-4';
 @Component({
     selector: 'app-menu-sidebar',
     templateUrl: './menu-sidebar.component.html',
-    styleUrls: ['./menu-sidebar.component.scss']
+    styleUrls: ['./menu-sidebar.component.css']
 })
 export class MenuSidebarComponent implements OnInit {
     @HostBinding('class') classes: string = BASE_CLASSES;
@@ -34,30 +34,72 @@ export class MenuSidebarComponent implements OnInit {
 
 export const MENU = [
     {
-        name: 'Dashboard',
-        iconClasses: 'fas fa-tachometer-alt',
-        path: ['/'],
-        
-    },
-    {
-        name: 'Blank',
-        iconClasses: 'fas fa-file',
-        path: ['/blank']
-    },
-    {
-        name: 'Dynamic Approval Procee',
-        iconClasses: 'fas fa-folder',
+        name: 'Dynamic Approval Process',
+        iconClasses: 'fas fa-list',
         children: [
             {
                 name: 'Submission',
-                iconClasses: 'far fa-address-book',
+                iconClasses: 'far fa-circle nav-icon',
                 path: ['/sub-menu-1']
             },
             {
                 name: 'My Approval',
-                iconClasses: 'fas fa-file',
-                path: ['/sub-menu-2']
+                iconClasses: 'far fa-circle nav-icon',
+                // path: ['']
+            },
+            {
+                name: 'My Copy To',
+                iconClasses: 'far fa-circle nav-icon',
+                // path: ['']
+            },
+            {
+                name: 'Doc Templates ',
+                iconClasses: 'far fa-circle nav-icon',
+                // path: ['']
+            },
+            {
+                name: 'Report',
+                iconClasses: 'far fa-circle nav-icon',
+                // path: ['']
+            },
+            {
+                name: 'Organization Chart',
+                iconClasses: 'far fa-circle nav-icon',
+                // path: ['']
+            },
+            {
+                name: 'User Management',
+                iconClasses: 'fas fa-list',
+                children: [
+                        {
+                            name: 'User',
+                            iconClasses: 'far fa-circle nav-icon',
+                            path: ['']
+                        },
+                        {
+                            name: 'Group',
+                            iconClasses: 'far fa-circle nav-icon',
+                            path: ['']
+                        },
+                        {
+                            name: 'User Group',
+                            iconClasses: 'far fa-circle nav-icon',
+                            path: ['']
+                        },
+                    ]
             }
         ]
-    }
+    },
+    {
+        name: 'Logout',
+        iconClasses: 'nav-icon fas fa-sign-out-alt',
+        path: ['/'],
+        
+    },
+    // {
+    //     name: 'Blank',
+    //     iconClasses: 'far fa-circle nav-icon',
+    //     path: ['/blank']
+    // },
+    
 ];

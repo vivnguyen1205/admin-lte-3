@@ -1,0 +1,61 @@
+.col{
+    position: relative;
+    width: 100%;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+
+}
+
+
+.form{
+    padding: 20px;
+}
+.col-md-12{
+    box-sizing: border-box;
+    
+}
+.chk-all {
+    background-color: #ffa07a;
+    margin-right: 10px;
+
+}
+.chk-in-progress {
+    background-color: #6c757d;
+    padding: 10px;
+    margin-right: 10px;
+}
+.chk-tab {
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px;
+}
+.chk-rejected {
+    background-color: #dc3545;
+    padding: 10px;
+    margin-right: 10px;
+    
+}
+.chk-approved {
+    background-color: #28a745;
+    padding: 10px;
+    margin-right: 10px;
+}
+.chk-archived {
+    background-color: #00008b;
+    padding: 10px;
+    margin-right: 10px;
+}
+/* .item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-right: 10px;
+} */
+.md-12{
+    padding: 20px;
+}
