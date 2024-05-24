@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.18](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.17...v0.2.18) (2024-05-24)
+
+
+### Features
+
+* add write-env script for environments ([3e3558c](https://github.com/erdkse/adminlte-3-angular/commit/3e3558c263939a3dbca56c0ff8100fd80b45b255))
+
 ### [0.2.17](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.16...v0.2.17) (2024-05-23)
 
 ### [0.2.16](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.15...v0.2.16) (2024-05-23)
