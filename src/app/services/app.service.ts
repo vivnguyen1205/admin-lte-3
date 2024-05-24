@@ -51,7 +51,7 @@ export class AppService {
             this.router.navigate(['/']);
             return result;
         } catch (error) {
-            throw error;
+            this.toastr.error(error.message);
         }
     }
 
@@ -67,7 +67,7 @@ export class AppService {
 
             return result;
         } catch (error) {
-            throw error;
+            this.toastr.error(error.message);
         }
     }
 
@@ -79,7 +79,7 @@ export class AppService {
 
             return result;
         } catch (error) {
-            throw error;
+            this.toastr.error(error.message);
         }
     }
 
@@ -94,7 +94,7 @@ export class AppService {
             }
         } catch (error) {
             this.logout();
-            throw error;
+            this.toastr.error(error.message);
         }
     }
 
