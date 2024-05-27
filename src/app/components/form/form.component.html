@@ -1,5 +1,6 @@
 <div class="form">
 <div class="card">
+    <!-- key word search  -->
     <div class="card-body cb-search">
     <div class="row">
     <div class="col">
@@ -10,17 +11,36 @@
     </div>
     </div>
     </div>
-    <div class="col-md-2 col-sm-2 col-12 mb-1 mb-sm-0" style="max-width: 150px">
+  <!-- //key word search  -->
+  <!-- SELECT URGENCY DROPDOWN  -->
+    <div class="col-md-2 col-sm-2 col-12 mb-1 mb-sm-0" style="max-width: 250px;" >
     <div class="form-group">
     <label>Urgent:</label>
-    <select class="select2 select2-hidden-accessible" style="width: 100%;" id="slUrgent" data-select2-id="slUrgent" tabindex="-1" aria-hidden="true">
+    <select class="select2 select2-hidden-accessible"   id="slUrgent" data-select2-id="slUrgent" tabindex="-1" aria-hidden="true">
     <option value="" data-select2-id="2">--All--</option>
     <option value="True">Is urgent</option>
     <option value="False">Not urgent</option>
-    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-slUrgent-container"><span class="select2-selection__rendered" id="select2-slUrgent-container" role="textbox" aria-readonly="true" title="--All--"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </select>
+    <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" >
+        <!-- <span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-slUrgent-container"> -->
+        <!-- <span class="select2-selection__rendered" id="select2-slUrgent-container" role="textbox" aria-readonly="true" title="--All--">--All--</span> -->
+        <span class="select2-selection__arrow" role="presentation">
+            <b role="presentation">
+            </b>
+        </span>
+        </span>
+        <!-- </span> -->
+    <span class="dropdown-wrapper" aria-hidden="true">
+
+</span>
+<!-- </span> -->
     </div>
     </div>
-    <div class="col-md-3 col-sm-3 col-12 mb-1 mb-sm-0" style="max-width: 250px">
+    <!-- //SELECT URGENCY DROPDOWN  -->
+
+    <!--  CREATE DATE -->
+
+    <div class="col-md-3 col-sm-3 col-12 mb-1 mb-sm-0">
     <div class="form-group">
     <label>Create date:</label>
     <div class="input-group">
@@ -33,7 +53,10 @@
     </div>
     </div>
     </div>
-    <div class="col-md-3 col-sm-3 col-12 mb-1 mb-sm-0" style="max-width: 250px">
+    <!-- //CREATE DATE  -->
+
+    <!-- FINAL UPDATE DATE  -->
+    <div class="col-md-3 col-sm-3 col-12 mb-1 mb-sm-0" >
     <div class="form-group">
     <label>Final update date:</label>
     <div class="input-group">
@@ -46,24 +69,28 @@
     </div>
     </div>
     </div>
-    <div class="col" style="max-width: 220px;">
+      <!-- //FINAL UPDATE DATE  -->
+
+      <!-- SEARCH CHECK BOX  -->
+    <div class="col">
     <label class="d-none d-sm-block">&nbsp;</label>
-    <div class="buttons">
+    <div>
     <a onclick="searchByCheckbox()" class="btn bg-gradient-primary">
     <i class="fa fa-search"></i> Search
     </a>
+
     <a onclick="OpenFirstStepDialog()" class="btn bg-gradient-primary">
-    <i class="fa fa-plus"></i> Add new
-    </a>
+    <i class="fa fa-plus" ></i> Add new </a>
     </div>
     </div>
  
     <div class="col-md-12">
     <div class="tab-container">
+   
           <!-- CHIPS -->
     <div class="item chk-tab chk-all">
     <input class="my-chk" type="checkbox" id="chk-all" name="options">
-    <label class="tab-label" id="all-tab-label" for="chk-all">All (0)</label>
+    <label class="tab-label" id="all-tab-label" for="chk-all">All </label>
     </div>
   
    <div class="item chk-tab chk-in-progress">

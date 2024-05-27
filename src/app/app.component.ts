@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Router, Event, NavigationEnd} from '@angular/router';
 import {environment} from 'environments/environment';
 import {GoogleAnalyticsService} from 'ngx-google-analytics';
-
+import { GetdataComponent } from '@services/getdata/getdata.component';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',

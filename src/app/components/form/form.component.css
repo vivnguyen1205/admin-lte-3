@@ -5,7 +5,27 @@
     padding-left: 7.5px;
 
 }
-
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+/* Urgency drop down  */
+.col-md-3 .col-sm-3 .col-12 .mb-1 .mb-sm-0{
+    max-width: 250px;
+}
+.select2 {
+    width: 100%;
+}
+/* //urgency */
 
 .form{
     padding: 20px;
@@ -14,11 +34,29 @@
     box-sizing: border-box;
     
 }
+/* CREATE / UPDATE DATE  */
+.col-md-3{
+    max-width: 250px;
+}
+/* //DATE  */
+
+/* .searchbutton{
+    max-width: 220px;
+    padding-right: 20px;
+    color:#dc3545;
+} */
+
+/* select chips */
 .chk-all {
     background-color: #ffa07a;
     margin-right: 10px;
 
 }
+
+.d-none .d-sm-block{
+    padding: 30px;
+}
+
 .chk-in-progress {
     background-color: #6c757d;
     padding: 10px;
@@ -34,6 +72,10 @@
     font-size: 14px;
     padding: 10px;
 }
+.tab-label{
+padding-left: 10px;
+}
+
 .chk-rejected {
     background-color: #dc3545;
     padding: 10px;

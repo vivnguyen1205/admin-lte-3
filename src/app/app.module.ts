@@ -1,9 +1,10 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
-
+import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from '@/app-routing.module';
 import {AppComponent} from './app.component';
+import { GetdataComponent } from './services/getdata/getdata.component';
 import {MainComponent} from '@modules/main/main.component';
 import {LoginComponent} from '@modules/login/login.component';
 import {HeaderComponent} from '@modules/main/header/header.component';
@@ -39,6 +40,8 @@ import {environment} from 'environments/environment';
 import { FormComponent } from './components/form/form.component';
 import { TableComponent } from './components/table/table.component';
 import { NewComponent } from './components/new/new.component';
+// import { GetdataComponent } from './services/getdata/getdata.component';
+import { get } from 'http';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -67,10 +70,13 @@ registerLocaleData(localeEn, 'en-EN');
         SidebarSearchComponent,
         FormComponent,
         TableComponent,
-        NewComponent
+        GetdataComponent,
+        NewComponent,
+      
     ],
     bootstrap: [AppComponent],
     imports: [
+
         ProfabricComponentsModule,
         CommonModule,
         BrowserModule,
