@@ -11,7 +11,6 @@ import {NonAuthGuard} from '@guards/non-auth.guard';
 import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.component';
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {SubMenuComponent} from '@pages/main-menu/sub-menu/sub-menu.component';
-import { GetdataComponent } from '@services/getdata/getdata.component';
 
 const routes: Routes = [
     {

@@ -1,10 +1,9 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from '@/app-routing.module';
 import {AppComponent} from './app.component';
-import { GetdataComponent } from './services/getdata/getdata.component';
 import {MainComponent} from '@modules/main/main.component';
 import {LoginComponent} from '@modules/login/login.component';
 import {HeaderComponent} from '@modules/main/header/header.component';
@@ -39,9 +38,10 @@ import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {environment} from 'environments/environment';
 import { FormComponent } from './components/form/form.component';
 import { TableComponent } from './components/table/table.component';
-import { NewComponent } from './components/new/new.component';
 // import { GetdataComponent } from './services/getdata/getdata.component';
 import { get } from 'http';
+import { GetdataComponent } from './pages/main-menu/getdata/getdata.component';
+import { HttpHandleErrorInterceptor } from './utils/http-handle-error-interceptor';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -71,7 +71,6 @@ registerLocaleData(localeEn, 'en-EN');
         FormComponent,
         TableComponent,
         GetdataComponent,
-        NewComponent,
       
     ],
     bootstrap: [AppComponent],
@@ -91,6 +90,10 @@ registerLocaleData(localeEn, 'en-EN');
         }),
         NgxGoogleAnalyticsModule.forRoot(environment.GA_ID)
     ],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
+    providers: [provideHttpClient(withInterceptorsFromDi()), {
+        provide: HTTP_INTERCEPTORS,
+        useClass: HttpHandleErrorInterceptor,
+        multi: true
+      },]
 })
 export class AppModule {}

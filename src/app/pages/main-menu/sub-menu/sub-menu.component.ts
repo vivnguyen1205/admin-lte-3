@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { GetdataComponent } from '@services/getdata/getdata.component';
+import { ApiService } from '@services/api.service';
+import { FormComponent } from '@components/form/form.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
