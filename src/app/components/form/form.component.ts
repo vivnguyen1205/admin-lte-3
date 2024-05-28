@@ -9,11 +9,11 @@ import {OnInit} from '@angular/core';
   styleUrl: './form.component.css'
 })
 export class FormComponent implements OnInit{
-  allValue: number = 1;
-  inProgressValue: number = 1;
-  approvedValue: number = 1;
-  rejectedValue: number = 1;
-  archivedValue: number = 1;
+  TotalItemCount: number = 1;
+  TotalInProgressItemCount: number = 1;
+  TotalApprovedItemCount: number = 1;
+  TotalRejectedItemCount: number = 1;
+  TotalArchiveItemCount: number = 1;
   
   constructor(
     private apiService: ApiService
