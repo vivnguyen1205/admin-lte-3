@@ -12,7 +12,21 @@
         ></i>
     </p>
 </a>
-<ul class="nav nav-treeview" *ngFor="let item of menuItem.children" [@openClose]="isMenuExtended">
+@for (item of menuItem.children; track menuItem ) {
+   
+    <li class="nav-item" [@openClose]="isMenuExtended">
+        <a
+            [routerLink]="item.path"
+            [routerLinkActive]="'active'"
+            class="nav-link"
+        >
+            <i class="nav-icon {{ item.iconClasses }}"></i>
+            <p>{{ item.name }}</p>
+        </a>
+    </li>
+
+}
+<!-- <ul class="nav nav-treeview" *ngFor="let item of menuItem.children" [@openClose]="isMenuExtended">
     <li class="nav-item">
         <a
             [routerLink]="item.path"
@@ -23,4 +37,4 @@
             <p>{{ item.name }}</p>
         </a>
     </li>
-</ul>
+</ul> -->

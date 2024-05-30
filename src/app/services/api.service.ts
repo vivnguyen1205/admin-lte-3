@@ -9,7 +9,7 @@ import { HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class ApiService {
     private API_URL = 'https://edoc-stg.genesolutions.vn/api/GetTotalTabStatus?page=MySigner';
-    private options= {
+    private apiOptions= {
         headers: new HttpHeaders({
         'accept': 'application/json, text/javascript, */*; q=0.01',
         'Content-type': 'application/json;charset=utf-8',

@@ -4,3 +4,10 @@ padding: 30px;
 .table{
     padding: 20px;
 }
+.input-group .input-group-sm{
+    width: 150px;
+
+}
+.jsgrid-cell{
+    width: 80px;
+}
