@@ -1,9 +1,10 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
-import {HttpClientModule} from '@angular/common/http';
-import {AppRoutingModule} from '@/app-routing.module';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http'; // importing the http module
+import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import { HttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
 import {MainComponent} from '@modules/main/main.component';
 import {LoginComponent} from '@modules/login/login.component';
 import {HeaderComponent} from '@modules/main/header/header.component';
@@ -42,6 +43,7 @@ import { TableComponent } from './components/table/table.component';
 import { get } from 'http';
 import { GetdataComponent } from './pages/main-menu/getdata/getdata.component';
 import { HttpHandleErrorInterceptor } from './utils/http-handle-error-interceptor';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -75,7 +77,9 @@ registerLocaleData(localeEn, 'en-EN');
     ],
     bootstrap: [AppComponent],
     imports: [
-
+        BrowserModule,
+		AppRoutingModule,
+		HttpClientModule,
         ProfabricComponentsModule,
         CommonModule,
         BrowserModule,
@@ -90,10 +94,13 @@ registerLocaleData(localeEn, 'en-EN');
         }),
         NgxGoogleAnalyticsModule.forRoot(environment.GA_ID)
     ],
-    providers: [provideHttpClient(withInterceptorsFromDi()), {
-        provide: HTTP_INTERCEPTORS,
-        useClass: HttpHandleErrorInterceptor,
-        multi: true
-      },]
+    providers: [
+      provideAnimationsAsync()
+    ],
+    // providers: [provideHttpClient(withInterceptorsFromDi()), {
+    //     provide: HTTP_INTERCEPTORS,
+    //     useClass: HttpHandleErrorInterceptor,
+    //     multi: true
+    //   },]
 })
 export class AppModule {}
